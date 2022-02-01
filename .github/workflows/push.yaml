@@ -17,6 +17,6 @@ jobs:
         with:
           username: ${{ secrets.DOCKER_USER }}
           password: ${{ secrets.DOCKER_PASS }}
-          repository: vassaln-cloud/guestbook
+          repository: nicolasvassal/guestbook
           tag_with_sha: true
           dockerfile: guestbook/Dockerfile
