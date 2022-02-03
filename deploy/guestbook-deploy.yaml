@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: guestbook-v2
+  name: guestbook-vassaln
   labels:
     app: guestbook
 spec:
