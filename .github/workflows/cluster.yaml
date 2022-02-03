@@ -41,5 +41,12 @@ jobs:
       - name: Install kubectl
         uses: azure/setup-kubectl@v2.0
 
-      - name: apply all K8S YAML
+      - name: Deploy the application
+        run: kubectl create deployment guestbook-khedim --image=nvassal/guestbook:$GITHUB_SHA
+        continue-on-error: true
+
+      - name: Deploy application
+        run: kubectl set image deployment/guestbook-khedim guestbook=nvassal/guestbook:$GITHUB_SHA
+
+      - name: Expose application
         run: kubectl apply -f ./deploy
