@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: guestbook
-        image: nvassal/guestbook:1.0
+        image: nvassal/guestbook
         resources:
           requests:
             cpu: 100m
