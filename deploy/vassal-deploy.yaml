@@ -6,7 +6,7 @@ metadata:
   labels:
     app: guestbook-vassaln
   name: guestbook-vassaln
-  namespace: vassal
+  namespace: nicolasvassal
 spec:
   replicas: 1
   selector:
