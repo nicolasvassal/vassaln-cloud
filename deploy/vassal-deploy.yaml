@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  annotations:
+    flux.weave.works/automated: "false"
+  labels:
+    app: guestbook-vassaln
+  name: guestbook-vassaln
+  namespace: vassal
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: guestbook-vassaln
+  strategy: {}
+  template:
+    metadata:
+      labels:
+        app: guestbook-vassaln
+    spec:
+      containers:
+      - image: nvassal/guestbook:1.0
+        name: guestbook
